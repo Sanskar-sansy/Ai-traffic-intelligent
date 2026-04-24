@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import polyline
 
-API_KEY = "eyJvcmciOiI1YjNjZTM1OTc4NTExMTAwMDFjZjYyNDgiLCJpZCI6ImIxZGRhMzJkOTUyZjQyNzNiYTJiMmFhYzllYWUyYmQ0IiwiaCI6Im11cm11cjY0In0="
+API_KEY = ""
 
 # 📁 File path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

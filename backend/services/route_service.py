@@ -3,7 +3,10 @@ import pandas as pd
 import os
 import polyline
 
-API_KEY = ""
+API_KEY = os.getenv("ORS_API_KEY")
+
+if not API_KEY:
+    print("ORS_API_KEY not found in environment variables")
 
 # 📁 File path
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

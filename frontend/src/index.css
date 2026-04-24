@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radar: #00f5a0;
+  --alert: #ff4757;
+  --warn:  #ffa502;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: 'Space Grotesk', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 6px; }
+::-webkit-scrollbar-track { background: #0d1117; }
+::-webkit-scrollbar-thumb { background: #21262d; border-radius: 3px; }
+
+/* Glowing border utility */
+.glow-border { box-shadow: 0 0 0 1px #00f5a040, 0 0 12px #00f5a020; }
+.glow-red    { box-shadow: 0 0 0 1px #ff475740, 0 0 12px #ff475720; }
+
+/* Scanline overlay */
+.scanlines::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.04) 2px, rgba(0,0,0,0.04) 4px
+  );
+  pointer-events: none;
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.ticker-inner { animation: ticker 30s linear infinite; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+.blink { animation: blink 1.2s ease-in-out infinite; }

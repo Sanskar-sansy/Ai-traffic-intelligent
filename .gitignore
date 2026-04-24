@@ -1,0 +1,17 @@
+# Node
+node_modules/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# uploads (VERY IMPORTANT)
+backend/uploads/
+
+# API keys
+*.env
+
+# system
+.DS_Store
